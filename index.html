@@ -19,12 +19,10 @@
     </nav>
   </header>
 
-  <section id="home" class="hero">
-    <!-- Animamos el título principal con AOS -->
+  <section id="home" class="hero" data-aos="fade-up" data-aos-duration="3000">
     <h1 data-aos="fade-up">Welcome to Jim's Project</h1>
     <p>This is your GitHub Pages site, powered by HTML + CSS.</p>
 
-    <!-- Botón con contador -->
     <button id="contadorBtn">Haz clic aquí</button>
     <h2 id="contador" data-aos="zoom-in">0</h2>
   </section>
@@ -34,10 +32,8 @@
   </footer>
 
   <script>
-    // Saludo en consola
     console.log("¡Hola! Bienvenido a mi sitio web.");
 
-    // Lógica botón contador
     const btn = document.getElementById('contadorBtn');
     const contador = document.getElementById('contador');
     let count = 0;
@@ -51,9 +47,9 @@
   <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-  <!-- Inicialización AOS -->
   <script>
     AOS.init();
   </script>
 </body>
 </html>
+
