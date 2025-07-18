@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jim Proyecto</title>
   <link rel="stylesheet" href="style.css" />
+  
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -17,12 +20,41 @@
   </header>
 
   <section id="home" class="hero">
-    <h1>Welcome to Jim's Project</h1>
+    <!-- Animamos el título principal con AOS -->
+    <h1 data-aos="fade-up">Welcome to Jim's Project</h1>
     <p>This is your GitHub Pages site, powered by HTML + CSS.</p>
+
+    <!-- Botón con contador -->
+    <button id="contadorBtn">Haz clic aquí</button>
+    <h2 id="contador" data-aos="zoom-in">0</h2>
   </section>
 
   <footer>
     <p>&copy; 2025 Jim Project</p>
   </footer>
+
+  <script>
+    // Saludo en consola
+    console.log("¡Hola! Bienvenido a mi sitio web.");
+
+    // Lógica botón contador
+    const btn = document.getElementById('contadorBtn');
+    const contador = document.getElementById('contador');
+    let count = 0;
+
+    btn.addEventListener('click', () => {
+      count++;
+      contador.textContent = count;
+    });
+  </script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Inicialización AOS -->
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
+
